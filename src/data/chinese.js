@@ -101,6 +101,44 @@ export const chineseRelationships = {
   'mother.younger_sister.son':       { ageDependent: true, older: { zh: '表兄', pinyin: 'biǎo xiōng' }, younger: { zh: '表弟', pinyin: 'biǎo dì' } },
   'mother.younger_sister.daughter':  { ageDependent: true, older: { zh: '表姐', pinyin: 'biǎo jiě'  }, younger: { zh: '表妹', pinyin: 'biǎo mèi' } },
 
+  // ── 4 steps: paternal uncle's children's children ────────
+  // Son's children → 堂姪/堂姪女; daughter's children → 堂外甥/堂外甥女
+  'father.elder_brother.son.son':           { zh: '堂姪',   pinyin: 'táng zhí'        },
+  'father.elder_brother.son.daughter':      { zh: '堂姪女', pinyin: 'táng zhínǚ'      },
+  'father.elder_brother.daughter.son':      { zh: '堂外甥',  pinyin: 'táng wàishēng'  },
+  'father.elder_brother.daughter.daughter': { zh: '堂外甥女', pinyin: 'táng wàishēngnǚ' },
+  'father.younger_brother.son.son':         { zh: '堂姪',   pinyin: 'táng zhí'        },
+  'father.younger_brother.son.daughter':    { zh: '堂姪女', pinyin: 'táng zhínǚ'      },
+  'father.younger_brother.daughter.son':    { zh: '堂外甥',  pinyin: 'táng wàishēng'  },
+  'father.younger_brother.daughter.daughter':{ zh: '堂外甥女', pinyin: 'táng wàishēngnǚ' },
+
+  // ── 4 steps: paternal aunt's / all maternal cousins' children (表) ─
+  // Son's children → 表姪/表姪女; daughter's children → 表外甥/表外甥女
+  'father.elder_sister.son.son':            { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'father.elder_sister.son.daughter':       { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'father.elder_sister.daughter.son':       { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'father.elder_sister.daughter.daughter':  { zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+  'father.younger_sister.son.son':          { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'father.younger_sister.son.daughter':     { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'father.younger_sister.daughter.son':     { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'father.younger_sister.daughter.daughter':{ zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+  'mother.elder_brother.son.son':           { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'mother.elder_brother.son.daughter':      { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'mother.elder_brother.daughter.son':      { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'mother.elder_brother.daughter.daughter': { zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+  'mother.younger_brother.son.son':         { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'mother.younger_brother.son.daughter':    { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'mother.younger_brother.daughter.son':    { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'mother.younger_brother.daughter.daughter':{ zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+  'mother.elder_sister.son.son':            { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'mother.elder_sister.son.daughter':       { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'mother.elder_sister.daughter.son':       { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'mother.elder_sister.daughter.daughter':  { zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+  'mother.younger_sister.son.son':          { zh: '表姪',   pinyin: 'biǎo zhí'        },
+  'mother.younger_sister.son.daughter':     { zh: '表姪女', pinyin: 'biǎo zhínǚ'      },
+  'mother.younger_sister.daughter.son':     { zh: '表外甥',  pinyin: 'biǎo wàishēng'  },
+  'mother.younger_sister.daughter.daughter':{ zh: '表外甥女', pinyin: 'biǎo wàishēngnǚ' },
+
   // ── 4 steps: paternal cousin spouses (堂) — age-dependent
   'father.elder_brother.son.wife':         { ageDependent: true, older: { zh: '堂嫂',  pinyin: 'táng sǎo'  }, younger: { zh: '堂弟媳', pinyin: 'táng dìxí'  } },
   'father.elder_brother.daughter.husband': { ageDependent: true, older: { zh: '堂姐夫', pinyin: 'táng jiěfu' }, younger: { zh: '堂妹夫', pinyin: 'táng mèifu' } },

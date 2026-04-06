@@ -55,6 +55,16 @@ export const tamilRelationships = {
   'wife.father':     { ta: 'மாமனார்', roman: 'Māmaṉār' },
   'wife.mother':     { ta: 'மாமியார்', roman: 'Māmiyār' },
 
+  // ── 2 steps: spouse's siblings ──────────────────────────
+  'husband.elder_brother':   { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'husband.younger_brother': { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'husband.elder_sister':    { ta: 'நாத்தனார்',  roman: 'Nāttaṉār'  },
+  'husband.younger_sister':  { ta: 'நாத்தனார்',  roman: 'Nāttaṉār'  },
+  'wife.elder_brother':      { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'wife.younger_brother':    { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'wife.elder_sister':       { ta: 'மைத்துனி',  roman: 'Maitthuṉi'  },
+  'wife.younger_sister':     { ta: 'மைத்துனி',  roman: 'Maitthuṉi'  },
+
   // ── 2 steps: nieces & nephews ───────────────────────────
   'elder_brother.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
   'elder_brother.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
@@ -91,6 +101,44 @@ export const tamilRelationships = {
   'mother.elder_brother.daughter':   { ta: 'மச்சினி', roman: 'Maccini' },
   'mother.younger_brother.son':      { ta: 'மச்சான்',  roman: 'Maccāṉ' },
   'mother.younger_brother.daughter': { ta: 'மச்சினி', roman: 'Maccini' },
+
+  // ── 4 steps: parallel cousin's children ─────────────────
+  // Parallel cousins are treated as siblings, so their children = niece/nephew (மருமகன்/மருமகள்)
+  'father.elder_brother.son.son':            { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.elder_brother.son.daughter':       { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.elder_brother.daughter.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.elder_brother.daughter.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.younger_brother.son.son':          { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.younger_brother.son.daughter':     { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.younger_brother.daughter.son':     { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.younger_brother.daughter.daughter':{ ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.elder_sister.son.son':             { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.elder_sister.son.daughter':        { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.elder_sister.daughter.son':        { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.elder_sister.daughter.daughter':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.younger_sister.son.son':           { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.younger_sister.son.daughter':      { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.younger_sister.daughter.son':      { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.younger_sister.daughter.daughter': { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+
+  // ── 4 steps: cross-cousin's children ─────────────────────
+  // மச்சான்/மச்சினி's children follow the same niece/nephew pattern
+  'father.elder_sister.son.son':             { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.elder_sister.son.daughter':        { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.elder_sister.daughter.son':        { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.elder_sister.daughter.daughter':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.younger_sister.son.son':           { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.younger_sister.son.daughter':      { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'father.younger_sister.daughter.son':      { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'father.younger_sister.daughter.daughter': { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.elder_brother.son.son':            { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.elder_brother.son.daughter':       { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.elder_brother.daughter.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.elder_brother.daughter.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.younger_brother.son.son':          { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.younger_brother.son.daughter':     { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'mother.younger_brother.daughter.son':     { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'mother.younger_brother.daughter.daughter':{ ta: 'மருமகள்', roman: 'Marumakaḷ' },
 
   // ── 4 steps: parallel cousin spouses — age-dependent ────
   // (parallel cousins are treated as siblings, so their spouses follow sibling-spouse terms)

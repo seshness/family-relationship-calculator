@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { chineseRelationships, zhButtons } from './data/chinese';
 import { tamilRelationships, taButtons } from './data/tamil';
 import { calculate } from './utils/calculator';
@@ -22,7 +22,16 @@ const TOGGLE_BASE = 'px-2.5 py-1 text-sm font-semibold rounded transition-colors
 const TOGGLE_ON   = 'bg-orange-500 text-white';
 const TOGGLE_OFF  = 'text-gray-300';
 
+function primeSpeech() {
+  if (!window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance('');
+  u.volume = 0;
+  window.speechSynthesis.speak(u);
+  window.speechSynthesis.cancel();
+}
+
 export default function App() {
+  const speechPrimed = useRef(false);
   const [language, setLanguage]       = useState('zh');
   const [gender, setGender]           = useState('male');
   const [tokens, setTokens]           = useState([]);
@@ -115,7 +124,10 @@ export default function App() {
   }
 
   return (
-    <div className="flex flex-col h-dvh max-w-sm mx-auto bg-gray-900 text-white overflow-hidden">
+    <div
+      className="flex flex-col h-dvh max-w-sm mx-auto bg-gray-900 text-white overflow-hidden"
+      onPointerDown={() => { if (!speechPrimed.current) { primeSpeech(); speechPrimed.current = true; } }}
+    >
 
       {/* Display area: chain + result, with ← / AC sidebar */}
       <div className="flex-1 flex bg-gray-800 overflow-hidden min-h-0">

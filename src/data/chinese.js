@@ -4,28 +4,28 @@
 
 export const chineseRelationships = {
   // ── 1 step ──────────────────────────────────────────────
-  'father':          { zh: '父親', pinyin: 'fùqīn',   chain: '爸爸' },
-  'mother':          { zh: '母親', pinyin: 'mǔqīn',   chain: '媽媽' },
-  'husband':         { zh: '丈夫', pinyin: 'zhàngfū', chain: '老公' },
-  'wife':            { zh: '妻子', pinyin: 'qīzi',    chain: '老婆' },
-  'elder_brother':   { zh: '兄長', pinyin: 'xiōngzhǎng', chain: '哥哥' },
-  'younger_brother': { zh: '弟弟', pinyin: 'dìdi',    chain: '弟弟' },
-  'elder_sister':    { zh: '姊姊', pinyin: 'jiějie',  chain: '姐姐' },
-  'younger_sister':  { zh: '妹妹', pinyin: 'mèimei',  chain: '妹妹' },
-  'son':             { zh: '兒子', pinyin: 'érzi',    chain: '兒子' },
-  'daughter':        { zh: '女兒', pinyin: 'nǚér',    chain: '女兒' },
+  'father':          { zh: '父親', pinyin: 'fùqīn',       chain: '爸爸', colloquialPinyin: 'bàba' },
+  'mother':          { zh: '母親', pinyin: 'mǔqīn',       chain: '媽媽', colloquialPinyin: 'māma' },
+  'husband':         { zh: '丈夫', pinyin: 'zhàngfū',     chain: '老公', colloquialPinyin: 'lǎogōng' },
+  'wife':            { zh: '妻子', pinyin: 'qīzi',        chain: '老婆', colloquialPinyin: 'lǎopó' },
+  'elder_brother':   { zh: '兄長', pinyin: 'xiōngzhǎng', chain: '哥哥', colloquialPinyin: 'gēge' },
+  'younger_brother': { zh: '弟弟', pinyin: 'dìdi',        chain: '弟弟' },
+  'elder_sister':    { zh: '姊姊', pinyin: 'jiějie',      chain: '姐姐' },
+  'younger_sister':  { zh: '妹妹', pinyin: 'mèimei',      chain: '妹妹' },
+  'son':             { zh: '兒子', pinyin: 'érzi',        chain: '兒子' },
+  'daughter':        { zh: '女兒', pinyin: 'nǚér',        chain: '女兒' },
 
   // ── 2 steps: grandparents ───────────────────────────────
-  'father.father':   { zh: '祖父', pinyin: 'zǔfù',   chain: '爺爺' },
-  'father.mother':   { zh: '祖母', pinyin: 'zǔmǔ',   chain: '奶奶' },
-  'mother.father':   { zh: '外祖父', pinyin: 'wàizǔfù', chain: '外公' },
-  'mother.mother':   { zh: '外祖母', pinyin: 'wàizǔmǔ', chain: '外婆' },
+  'father.father':   { zh: '祖父',   pinyin: 'zǔfù',     chain: '爺爺', colloquialPinyin: 'yéye' },
+  'father.mother':   { zh: '祖母',   pinyin: 'zǔmǔ',     chain: '奶奶', colloquialPinyin: 'nǎinai' },
+  'mother.father':   { zh: '外祖父', pinyin: 'wàizǔfù',  chain: '外公', colloquialPinyin: 'wàigōng' },
+  'mother.mother':   { zh: '外祖母', pinyin: 'wàizǔmǔ',  chain: '外婆', colloquialPinyin: 'wàipó' },
 
   // ── 2 steps: paternal aunts / uncles ────────────────────
-  'father.elder_brother':   { zh: '伯父', pinyin: 'bófù',   chain: '伯伯' },
-  'father.younger_brother': { zh: '叔父', pinyin: 'shūfù',  chain: '叔叔' },
-  'father.elder_sister':    { zh: '姑母', pinyin: 'gūmǔ',   chain: '姑姑' },
-  'father.younger_sister':  { zh: '姑姑', pinyin: 'gūgu',   chain: '姑姑' },
+  'father.elder_brother':   { zh: '伯父', pinyin: 'bófù',  chain: '伯伯', colloquialPinyin: 'bóbo' },
+  'father.younger_brother': { zh: '叔父', pinyin: 'shūfù', chain: '叔叔', colloquialPinyin: 'shūshu' },
+  'father.elder_sister':    { zh: '姑母', pinyin: 'gūmǔ',  chain: '姑姑', colloquialPinyin: 'gūgu' },
+  'father.younger_sister':  { zh: '姑姑', pinyin: 'gūgu',  chain: '姑姑' },
 
   // ── 2 steps: maternal aunts / uncles ────────────────────
   'mother.elder_brother':   { zh: '舅舅', pinyin: 'jiùjiu', chain: '舅舅' },

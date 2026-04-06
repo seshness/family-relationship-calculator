@@ -44,22 +44,22 @@ export const tamilRelationships = {
   'mother.younger_sister.husband':{ ta: 'சித்தப்பா', roman: 'Cittappā' },
 
   // ── 2 steps: siblings' spouses ──────────────────────────
-  'elder_brother.wife':     { ta: 'அண்ணி',    roman: 'Aṇṇi' },
+  'elder_brother.wife':     { ta: 'அண்ணி',    roman: 'Aṇṇi',       colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi' },
   'younger_brother.wife':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
   'elder_sister.husband':   { ta: 'மாமா',     roman: 'Māmā' },
   'younger_sister.husband': { ta: 'மாமா',     roman: 'Māmā' },
 
   // ── 2 steps: in-laws ────────────────────────────────────
-  'husband.father':  { ta: 'மாமனார்', roman: 'Māmaṉār' },
-  'husband.mother':  { ta: 'மாமியார்', roman: 'Māmiyār' },
-  'wife.father':     { ta: 'மாமனார்', roman: 'Māmaṉār' },
-  'wife.mother':     { ta: 'மாமியார்', roman: 'Māmiyār' },
+  'husband.father':  { ta: 'மாமனார்', roman: 'Māmaṉār', colloquial: 'மாமா',  colloquialRoman: 'Māmā' },
+  'husband.mother':  { ta: 'மாமியார்', roman: 'Māmiyār', colloquial: 'மாமி',  colloquialRoman: 'Māmi' },
+  'wife.father':     { ta: 'மாமனார்', roman: 'Māmaṉār', colloquial: 'மாமா',  colloquialRoman: 'Māmā' },
+  'wife.mother':     { ta: 'மாமியார்', roman: 'Māmiyār', colloquial: 'மாமி',  colloquialRoman: 'Māmi' },
 
   // ── 2 steps: spouse's siblings ──────────────────────────
   'husband.elder_brother':   { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
   'husband.younger_brother': { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
-  'husband.elder_sister':    { ta: 'நாத்தனார்',  roman: 'Nāttaṉār'  },
-  'husband.younger_sister':  { ta: 'நாத்தனார்',  roman: 'Nāttaṉār'  },
+  'husband.elder_sister':    { ta: 'நாத்தனார்',  roman: 'Nāttaṉār',  colloquial: 'நாத்தி', colloquialRoman: 'Nātti' },
+  'husband.younger_sister':  { ta: 'நாத்தனார்',  roman: 'Nāttaṉār',  colloquial: 'நாத்தி', colloquialRoman: 'Nātti' },
   'wife.elder_brother':      { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
   'wife.younger_brother':    { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
   'wife.elder_sister':       { ta: 'மைத்துனி',  roman: 'Maitthuṉi'  },
@@ -142,14 +142,14 @@ export const tamilRelationships = {
 
   // ── 4 steps: parallel cousin spouses — age-dependent ────
   // (parallel cousins are treated as siblings, so their spouses follow sibling-spouse terms)
-  'father.elder_brother.son.wife':          { ageDependent: true, older: { ta: 'அண்ணி',           roman: 'Aṇṇi'           }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
-  'father.elder_brother.daughter.husband':  { ageDependent: true, older: { ta: 'அக்கா கணவன்',    roman: 'Akkā Kaṇavaṉ'   }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
-  'father.younger_brother.son.wife':        { ageDependent: true, older: { ta: 'அண்ணி',           roman: 'Aṇṇi'           }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
-  'father.younger_brother.daughter.husband':{ ageDependent: true, older: { ta: 'அக்கா கணவன்',    roman: 'Akkā Kaṇavaṉ'   }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
-  'mother.elder_sister.son.wife':           { ageDependent: true, older: { ta: 'அண்ணி',           roman: 'Aṇṇi'           }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
-  'mother.elder_sister.daughter.husband':   { ageDependent: true, older: { ta: 'அக்கா கணவன்',    roman: 'Akkā Kaṇavaṉ'   }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
-  'mother.younger_sister.son.wife':         { ageDependent: true, older: { ta: 'அண்ணி',           roman: 'Aṇṇi'           }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
-  'mother.younger_sister.daughter.husband': { ageDependent: true, older: { ta: 'அக்கா கணவன்',    roman: 'Akkā Kaṇavaṉ'   }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
+  'father.elder_brother.son.wife':          { ageDependent: true, older: { ta: 'அண்ணி',        roman: 'Aṇṇi',         colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi'         }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
+  'father.elder_brother.daughter.husband':  { ageDependent: true, older: { ta: 'அக்கா கணவன்', roman: 'Akkā Kaṇavaṉ'                                                               }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
+  'father.younger_brother.son.wife':        { ageDependent: true, older: { ta: 'அண்ணி',        roman: 'Aṇṇi',         colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi'         }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
+  'father.younger_brother.daughter.husband':{ ageDependent: true, older: { ta: 'அக்கா கணவன்', roman: 'Akkā Kaṇavaṉ'                                                               }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
+  'mother.elder_sister.son.wife':           { ageDependent: true, older: { ta: 'அண்ணி',        roman: 'Aṇṇi',         colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi'         }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
+  'mother.elder_sister.daughter.husband':   { ageDependent: true, older: { ta: 'அக்கா கணவன்', roman: 'Akkā Kaṇavaṉ'                                                               }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
+  'mother.younger_sister.son.wife':         { ageDependent: true, older: { ta: 'அண்ணி',        roman: 'Aṇṇi',         colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi'         }, younger: { ta: 'தம்பி மனைவி',  roman: 'Tampi Maṉaivi'  } },
+  'mother.younger_sister.daughter.husband': { ageDependent: true, older: { ta: 'அக்கா கணவன்', roman: 'Akkā Kaṇavaṉ'                                                               }, younger: { ta: 'தங்கை கணவன்', roman: 'Taṅkai Kaṇavaṉ' } },
 
   // ── 4 steps: cross-cousin spouses ───────────────────────
   // மச்சான் (cross cousin) → his wife is மச்சினி; மச்சினி → her husband is மச்சான்

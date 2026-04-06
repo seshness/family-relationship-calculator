@@ -48,7 +48,6 @@ export default function App() {
   const canRelation  = tokens.length === 0 || lastToken?.type === 'connector';
   const canConnector = lastToken?.type === 'relation';
   const canCalculate = lastToken?.type === 'relation';
-  const canSpeak     = result && result !== 'unknown';
   const canBackspace = tokens.length > 0;
 
   const path = tokens.filter(t => t.type === 'relation').map(t => t.key);
@@ -110,17 +109,6 @@ export default function App() {
     } else {
       setResult(resolved.entry); setPendingAge(null);
     }
-  }
-
-  function handleSpeak() {
-    if (!canSpeak || !window.speechSynthesis) return;
-    const text = language === 'zh' ? result.zh : result.ta;
-    const lang = language === 'zh' ? 'zh-TW' : 'ta-IN';
-    if (!text) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang;
-    window.speechSynthesis.speak(utterance);
   }
 
   return (
@@ -189,18 +177,6 @@ export default function App() {
             தமிழ்
           </button>
         </div>
-
-        {/* Speak button — only visible when there is a result */}
-        {canSpeak && (
-          <button
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-600
-                       border border-gray-500 text-white text-xl active:bg-gray-500"
-            onPointerDown={handleSpeak}
-            aria-label="Pronounce result"
-          >
-            🔊
-          </button>
-        )}
 
         {/* Gender toggle */}
         <div className="flex gap-0.5 bg-gray-600 rounded p-0.5">

@@ -24,10 +24,11 @@ const TOGGLE_OFF  = 'text-gray-300';
 
 function primeSpeech() {
   if (!window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance('');
-  u.volume = 0;
-  window.speechSynthesis.speak(u);
-  window.speechSynthesis.cancel();
+  // iOS returns an empty voice list until getVoices() is called inside a
+  // voiceschanged handler. Calling it here on first user interaction ensures
+  // voices are populated by the time the user taps a play button.
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
 }
 
 export default function App() {

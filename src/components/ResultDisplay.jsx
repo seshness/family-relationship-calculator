@@ -10,18 +10,30 @@ function ColloquialLabel({ language }) {
   );
 }
 
+function speak(text, lang) {
+  if (!window.speechSynthesis || !text) return;
+  const synth = window.speechSynthesis;
+  // Only cancel if something is already playing — cancelling when idle can
+  // corrupt the iOS audio session and cause subsequent speak() calls to be dropped.
+  if (synth.speaking || synth.pending) synth.cancel();
+  const voices = synth.getVoices();
+  // Prefer exact lang match before falling back to prefix (e.g. prefer zh-TW over zh-CN).
+  const prefix = lang.split('-')[0];
+  const match = voices.find(v => v.lang === lang) ?? voices.find(v => v.lang.startsWith(prefix));
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  // iOS ignores utterance.lang for voice selection — must set utterance.voice explicitly.
+  if (match) u.voice = match;
+  // Must be called from an onClick handler (not onPointerDown) — iOS only unlocks
+  // the audio session for speech synthesis on touchend/click, not touchstart/pointerdown.
+  synth.speak(u);
+}
+
 function PlayButton({ text, lang }) {
-  function speak() {
-    if (!window.speechSynthesis || !text) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang;
-    window.speechSynthesis.speak(u);
-  }
   return (
     <button
       className="ml-3 shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 text-white active:bg-gray-600"
-      onPointerDown={speak}
+      onClick={() => speak(text, lang)}
       aria-label="Play"
     >
       ▶

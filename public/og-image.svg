@@ -43,10 +43,9 @@
   <text x="238" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#e2e8f0">Elder Sister</text>
   <text x="398" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#64748b">=</text>
 
-  <!-- Result -->
-  <text x="108" y="524" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="700" fill="white">பெரியம்மா</text>
-  <text x="108" y="536" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="0" fill="none">spacer</text>
-  <text x="108" y="558" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#f97316">Periyammā</text>
+  <!-- Result: Tamil script left, romanization right-aligned, same baseline -->
+  <text x="108" y="530" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="700" fill="white">பெரியம்மா</text>
+  <text x="572" y="530" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" fill="#f97316" text-anchor="end">Periyammā</text>
 
   <!-- Divider -->
   <line x1="680" y1="60" x2="680" y2="570" stroke="#ffffff12" stroke-width="1"/>

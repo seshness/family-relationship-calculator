@@ -36,8 +36,8 @@ export const tamilRelationships = {
   // ── 2 steps: aunt/uncle spouses ─────────────────────────
   'father.elder_brother.wife':    { ta: 'பெரியம்மா', roman: 'Periyammā' },
   'father.younger_brother.wife':  { ta: 'சித்தி',     roman: 'Citti' },
-  'father.elder_sister.husband':  { ta: 'அத்தை மாமா', roman: 'Attai Māmā' },
-  'father.younger_sister.husband':{ ta: 'அத்தை மாமா', roman: 'Attai Māmā' },
+  'father.elder_sister.husband':  { ta: 'அத்தை மாமா', roman: 'Attai Māmā', colloquial: 'அத்திம்பர்', colloquialRoman: 'Athimber' },
+  'father.younger_sister.husband':{ ta: 'அத்தை மாமா', roman: 'Attai Māmā', colloquial: 'அத்திம்பர்', colloquialRoman: 'Athimber' },
   'mother.elder_brother.wife':    { ta: 'மாமி',       roman: 'Māmi' },
   'mother.younger_brother.wife':  { ta: 'மாமி',       roman: 'Māmi' },
   'mother.elder_sister.husband':  { ta: 'பெரியப்பா', roman: 'Periyappā' },
@@ -46,7 +46,7 @@ export const tamilRelationships = {
   // ── 2 steps: siblings' spouses ──────────────────────────
   'elder_brother.wife':     { ta: 'அண்ணி',    roman: 'Aṇṇi',       colloquial: 'மன்னி',      colloquialRoman: 'Maṇṇi' },
   'younger_brother.wife':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
-  'elder_sister.husband':   { ta: 'மாமா',     roman: 'Māmā' },
+  'elder_sister.husband':   { ta: 'மாமா',     roman: 'Māmā',  colloquial: 'அத்திம்பர்', colloquialRoman: 'Athimber' },
   'younger_sister.husband': { ta: 'மாமா',     roman: 'Māmā' },
 
   // ── 2 steps: in-laws ────────────────────────────────────

@@ -24,7 +24,7 @@ export default function ButtonGrid({
   const row3 = buttons.slice(8, 10);
 
   const isChinese = language === 'zh';
-  const btnTextSize = isChinese ? 'text-4xl' : 'text-xs leading-snug text-center px-1';
+  const btnTextSize = isChinese ? 'font-kaiti text-4xl' : 'text-xs leading-snug text-center px-1';
 
   function RelBtn({ btn }) {
     const enabled = canRelation;

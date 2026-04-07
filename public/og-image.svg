@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a2234"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Orange accent bar at bottom -->
+  <rect x="0" y="594" width="1200" height="36" fill="#f97316"/>
+  <!-- Equals sign on orange bar -->
+  <text x="600" y="619" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" fill="white" text-anchor="middle">=</text>
+
+  <!-- Left section -->
+
+  <!-- App name -->
+  <text x="80" y="148" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="700" fill="white" letter-spacing="-1">Family Relationship</text>
+  <text x="80" y="218" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="700" fill="white" letter-spacing="-1">Calculator</text>
+
+  <!-- Tagline -->
+  <text x="80" y="278" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" fill="#94a3b8">Build a chain. Get the right kinship term.</text>
+
+  <!-- Language pills -->
+  <rect x="80" y="318" width="108" height="44" rx="10" fill="#253047"/>
+  <text x="134" y="347" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#e2e8f0" text-anchor="middle">中文</text>
+
+  <rect x="202" y="318" width="144" height="44" rx="10" fill="#f97316"/>
+  <text x="274" y="347" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="white" text-anchor="middle">தமிழ்</text>
+
+  <!-- Chain example - card -->
+  <rect x="80" y="392" width="520" height="164" rx="16" fill="#253047"/>
+
+  <!-- Chain label -->
+  <text x="108" y="432" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="17" fill="#64748b">RELATIONSHIP CHAIN</text>
+
+  <!-- Chain tokens -->
+  <text x="108" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#e2e8f0">Mother</text>
+  <text x="208" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#f97316" font-weight="700">'s</text>
+  <text x="238" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#e2e8f0">Elder Sister</text>
+  <text x="398" y="472" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#64748b">=</text>
+
+  <!-- Result -->
+  <text x="108" y="524" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="700" fill="white">பெரியம்மா</text>
+  <text x="108" y="536" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="0" fill="none">spacer</text>
+  <text x="108" y="558" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#f97316">Periyammā</text>
+
+  <!-- Divider -->
+  <line x1="680" y1="60" x2="680" y2="570" stroke="#ffffff12" stroke-width="1"/>
+
+  <!-- Right section — stylised button grid -->
+  <!-- Section label -->
+  <text x="728" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="17" fill="#64748b">PRESS TO BUILD</text>
+
+  <!-- Button grid: 4 cols × 3 rows -->
+  <!-- Row 1 -->
+  <rect x="728" y="124" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="781" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Father</text>
+
+  <rect x="848" y="124" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="901" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Mother</text>
+
+  <rect x="968" y="124" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="1021" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Husband</text>
+
+  <rect x="1088" y="124" width="88" height="72" rx="12" fill="#253047"/>
+  <text x="1132" y="167" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Wife</text>
+
+  <!-- Row 2 -->
+  <rect x="728" y="210" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="781" y="244" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Elder</text>
+  <text x="781" y="267" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Brother</text>
+
+  <rect x="848" y="210" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="901" y="244" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Younger</text>
+  <text x="901" y="267" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Brother</text>
+
+  <rect x="968" y="210" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="1021" y="244" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Elder</text>
+  <text x="1021" y="267" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Sister</text>
+
+  <rect x="1088" y="210" width="88" height="72" rx="12" fill="#253047"/>
+  <text x="1132" y="244" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Younger</text>
+  <text x="1132" y="267" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Sister</text>
+
+  <!-- Row 3 -->
+  <rect x="728" y="296" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="781" y="339" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Son</text>
+
+  <rect x="848" y="296" width="106" height="72" rx="12" fill="#253047"/>
+  <text x="901" y="339" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Daughter</text>
+
+  <!-- 's button (highlighted) -->
+  <rect x="968" y="296" width="208" height="72" rx="12" fill="#1a2234" stroke="#f97316" stroke-width="2"/>
+  <text x="1072" y="339" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="700" fill="#f97316" text-anchor="middle">'s</text>
+
+  <!-- Row 4 — equals bar -->
+  <rect x="728" y="386" width="448" height="72" rx="12" fill="#f97316"/>
+  <text x="952" y="430" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle">=</text>
+
+  <!-- URL watermark -->
+  <text x="728" y="532" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#475569">ss-family-calculator.pages.dev</text>
+</svg>

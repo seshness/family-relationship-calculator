@@ -12,5 +12,5 @@ html, body, #root {
 }
 
 .font-kaiti {
-  font-family: 'Kaiti TC', KaiTi, STKaiti, serif;
+  font-family: 'Kaiti TC', KaiTi, STKaiti, 'simkai', cursive;
 }

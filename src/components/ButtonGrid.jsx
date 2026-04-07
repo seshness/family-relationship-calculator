@@ -68,9 +68,11 @@ export default function ButtonGrid({
           onPointerDown={() => canConnector && onConnector()}
           disabled={!canConnector}
         >
-          {connector}
+          <span className={isChinese ? 'font-kaiti' : ''}>
+            {connector}
+          </span>
           {isChinese && (
-            <span className="text-xs font-normal tracking-tight text-orange-300 leading-none mt-0.5" style={{fontFamily: 'sans-serif'}}>
+            <span className="text-xs font-normal tracking-tight text-orange-300 leading-none mt-0.5">
               de
             </span>
           )}

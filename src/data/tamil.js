@@ -65,6 +65,34 @@ export const tamilRelationships = {
   'wife.elder_sister':       { ta: 'மைத்துனி',  roman: 'Maitthuṉi'  },
   'wife.younger_sister':     { ta: 'மைத்துனி',  roman: 'Maitthuṉi'  },
 
+  // ── 3 steps: spouse's siblings' spouses ─────────────────
+  'husband.elder_brother.wife':    { ta: 'நாத்தனார்', roman: 'Nāttaṉār', colloquial: 'நாத்தி', colloquialRoman: 'Nātti' },
+  'husband.younger_brother.wife':  { ta: 'நாத்தனார்', roman: 'Nāttaṉār', colloquial: 'நாத்தி', colloquialRoman: 'Nātti' },
+  'husband.elder_sister.husband':  { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'husband.younger_sister.husband':{ ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'wife.elder_brother.wife':       { ta: 'மைத்துனி',  roman: 'Maitthuṉi' },
+  'wife.younger_brother.wife':     { ta: 'மைத்துனி',  roman: 'Maitthuṉi' },
+  'wife.elder_sister.husband':     { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+  'wife.younger_sister.husband':   { ta: 'மைத்துனன்', roman: 'Maitthuṉaṉ' },
+
+  // ── 3 steps: spouse's nieces & nephews ──────────────────
+  'husband.elder_brother.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'husband.elder_brother.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'husband.younger_brother.son':     { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'husband.younger_brother.daughter':{ ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'husband.elder_sister.son':        { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'husband.elder_sister.daughter':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'husband.younger_sister.son':      { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'husband.younger_sister.daughter': { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'wife.elder_brother.son':          { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'wife.elder_brother.daughter':     { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'wife.younger_brother.son':        { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'wife.younger_brother.daughter':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'wife.elder_sister.son':           { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'wife.elder_sister.daughter':      { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'wife.younger_sister.son':         { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'wife.younger_sister.daughter':    { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+
   // ── 2 steps: nieces & nephews ───────────────────────────
   'elder_brother.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
   'elder_brother.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
@@ -75,11 +103,31 @@ export const tamilRelationships = {
   'younger_sister.son':      { ta: 'மருமகன்', roman: 'Marumakaṉ' },
   'younger_sister.daughter': { ta: 'மருமகள்', roman: 'Marumakaḷ' },
 
+  // ── 2 steps: children's spouses ─────────────────────────
+  'son.wife':         { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'daughter.husband': { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+
   // ── 2 steps: grandchildren ──────────────────────────────
   'son.son':          { ta: 'பேரன்', roman: 'Pēraṉ' },
   'son.daughter':     { ta: 'பேத்தி', roman: 'Pētti' },
   'daughter.son':     { ta: 'பேரன்', roman: 'Pēraṉ' },
   'daughter.daughter':{ ta: 'பேத்தி', roman: 'Pētti' },
+
+  // ── 3 steps: grandchildren's spouses ────────────────────
+  'son.son.wife':              { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'son.daughter.husband':      { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'daughter.son.wife':         { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'daughter.daughter.husband': { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+
+  // ── 3 steps: great-grandchildren ────────────────────────
+  'son.son.son':               { ta: 'கொள்ளுப் பேரன்', roman: 'Koḷḷup Pēraṉ' },
+  'son.son.daughter':          { ta: 'கொள்ளுப் பேத்தி', roman: 'Koḷḷup Pētti' },
+  'son.daughter.son':          { ta: 'கொள்ளுப் பேரன்', roman: 'Koḷḷup Pēraṉ' },
+  'son.daughter.daughter':     { ta: 'கொள்ளுப் பேத்தி', roman: 'Koḷḷup Pētti' },
+  'daughter.son.son':          { ta: 'கொள்ளுப் பேரன்', roman: 'Koḷḷup Pēraṉ' },
+  'daughter.son.daughter':     { ta: 'கொள்ளுப் பேத்தி', roman: 'Koḷḷup Pētti' },
+  'daughter.daughter.son':     { ta: 'கொள்ளுப் பேரன்', roman: 'Koḷḷup Pēraṉ' },
+  'daughter.daughter.daughter':{ ta: 'கொள்ளுப் பேத்தி', roman: 'Koḷḷup Pētti' },
 
   // ── 3 steps: parallel cousins — age-dependent ───────────
   'father.elder_brother.son':        { ageDependent: true, older: { ta: 'அண்ணன்', roman: 'Aṇṇaṉ' }, younger: { ta: 'தம்பி',  roman: 'Tampi'  } },
@@ -172,11 +220,33 @@ export const tamilRelationships = {
   'younger_sister.son.wife':         { ta: 'மருமகள்', roman: 'Marumakaḷ' },
   'younger_sister.daughter.husband': { ta: 'மருமகன்', roman: 'Marumakaṉ' },
 
+  // ── 4 steps: grand-nieces & grand-nephews ───────────────
+  'elder_brother.son.son':              { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'elder_brother.son.daughter':         { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'elder_brother.daughter.son':         { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'elder_brother.daughter.daughter':    { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'younger_brother.son.son':            { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'younger_brother.son.daughter':       { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'younger_brother.daughter.son':       { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'younger_brother.daughter.daughter':  { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'elder_sister.son.son':               { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'elder_sister.son.daughter':          { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'elder_sister.daughter.son':          { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'elder_sister.daughter.daughter':     { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'younger_sister.son.son':             { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'younger_sister.son.daughter':        { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+  'younger_sister.daughter.son':        { ta: 'மருமகன்', roman: 'Marumakaṉ' },
+  'younger_sister.daughter.daughter':   { ta: 'மருமகள்', roman: 'Marumakaḷ' },
+
   // ── 3 steps: great-grandparents ─────────────────────────
   'father.father.father': { ta: 'கொள்ளுப் பாட்டன்', roman: 'Koḷḷup Pāṭṭaṉ' },
   'father.father.mother': { ta: 'கொள்ளுப் பாட்டி',  roman: 'Koḷḷup Pāṭṭi' },
   'mother.mother.father': { ta: 'கொள்ளுப் பாட்டன்', roman: 'Koḷḷup Pāṭṭaṉ' },
   'mother.mother.mother': { ta: 'கொள்ளுப் பாட்டி',  roman: 'Koḷḷup Pāṭṭi' },
+  'father.mother.father': { ta: 'கொள்ளுப் பாட்டன்', roman: 'Koḷḷup Pāṭṭaṉ' },
+  'father.mother.mother': { ta: 'கொள்ளுப் பாட்டி',  roman: 'Koḷḷup Pāṭṭi' },
+  'mother.father.father': { ta: 'கொள்ளுப் பாட்டன்', roman: 'Koḷḷup Pāṭṭaṉ' },
+  'mother.father.mother': { ta: 'கொள்ளுப் பாட்டி',  roman: 'Koḷḷup Pāṭṭi' },
 };
 
 export const taButtons = [

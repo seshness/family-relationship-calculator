@@ -65,6 +65,34 @@ export const chineseRelationships = {
   'wife.elder_sister':       { zh: '大姨子', pinyin: 'dà yízi',   chain: '大姨子' },
   'wife.younger_sister':     { zh: '小姨子', pinyin: 'xiǎo yízi', chain: '小姨子' },
 
+  // ── 3 steps: spouse's siblings' spouses ─────────────────
+  'husband.elder_brother.wife':    { zh: '大嫂',  pinyin: 'dàsǎo',       chain: '大嫂' },
+  'husband.younger_brother.wife':  { zh: '弟媳',  pinyin: 'dìxí',        chain: '弟媳' },
+  'husband.elder_sister.husband':  { zh: '大姑夫', pinyin: 'dà gūfu',     chain: '大姑夫' },
+  'husband.younger_sister.husband':{ zh: '小姑夫', pinyin: 'xiǎo gūfu',   chain: '小姑夫' },
+  'wife.elder_brother.wife':       { zh: '大舅嫂', pinyin: 'dà jiùsǎo',   chain: '大舅嫂' },
+  'wife.younger_brother.wife':     { zh: '小舅嫂', pinyin: 'xiǎo jiùsǎo', chain: '小舅嫂' },
+  'wife.elder_sister.husband':     { zh: '大姨夫', pinyin: 'dàyífu',      chain: '大姨夫' },
+  'wife.younger_sister.husband':   { zh: '小姨夫', pinyin: 'xiǎoyífu',    chain: '小姨夫' },
+
+  // ── 3 steps: spouse's nieces & nephews ──────────────────
+  'husband.elder_brother.son':       { zh: '姪子',   pinyin: 'zhízi'       },
+  'husband.elder_brother.daughter':  { zh: '姪女',   pinyin: 'zhínǚ'       },
+  'husband.younger_brother.son':     { zh: '姪子',   pinyin: 'zhízi'       },
+  'husband.younger_brother.daughter':{ zh: '姪女',   pinyin: 'zhínǚ'       },
+  'husband.elder_sister.son':        { zh: '外甥',   pinyin: 'wàishēng'    },
+  'husband.elder_sister.daughter':   { zh: '外甥女', pinyin: 'wàishēngnǚ'  },
+  'husband.younger_sister.son':      { zh: '外甥',   pinyin: 'wàishēng'    },
+  'husband.younger_sister.daughter': { zh: '外甥女', pinyin: 'wàishēngnǚ'  },
+  'wife.elder_brother.son':          { zh: '姪子',   pinyin: 'zhízi'       },
+  'wife.elder_brother.daughter':     { zh: '姪女',   pinyin: 'zhínǚ'       },
+  'wife.younger_brother.son':        { zh: '姪子',   pinyin: 'zhízi'       },
+  'wife.younger_brother.daughter':   { zh: '姪女',   pinyin: 'zhínǚ'       },
+  'wife.elder_sister.son':           { zh: '外甥',   pinyin: 'wàishēng'    },
+  'wife.elder_sister.daughter':      { zh: '外甥女', pinyin: 'wàishēngnǚ'  },
+  'wife.younger_sister.son':         { zh: '外甥',   pinyin: 'wàishēng'    },
+  'wife.younger_sister.daughter':    { zh: '外甥女', pinyin: 'wàishēngnǚ'  },
+
   // ── 2 steps: nieces & nephews ───────────────────────────
   'elder_brother.son':      { zh: '姪子', pinyin: 'zhízi',       chain: '姪子' },
   'elder_brother.daughter': { zh: '姪女', pinyin: 'zhínǚ',       chain: '姪女' },
@@ -75,11 +103,31 @@ export const chineseRelationships = {
   'younger_sister.son':     { zh: '外甥', pinyin: 'wàishēng',    chain: '外甥' },
   'younger_sister.daughter':{ zh: '外甥女', pinyin: 'wàishēngnǚ', chain: '外甥女' },
 
+  // ── 2 steps: children's spouses ─────────────────────────
+  'son.wife':         { zh: '媳婦', pinyin: 'xífù',    chain: '媳婦' },
+  'daughter.husband': { zh: '女婿', pinyin: 'nǚxu',    chain: '女婿' },
+
   // ── 2 steps: grandchildren ──────────────────────────────
   'son.son':         { zh: '孫子', pinyin: 'sūnzi',    chain: '孫子' },
   'son.daughter':    { zh: '孫女', pinyin: 'sūnnǚ',    chain: '孫女' },
   'daughter.son':    { zh: '外孫', pinyin: 'wàisūn',   chain: '外孫' },
   'daughter.daughter':{ zh: '外孫女', pinyin: 'wàisūnnǚ', chain: '外孫女' },
+
+  // ── 3 steps: grandchildren's spouses ────────────────────
+  'son.son.wife':              { zh: '孫媳婦',  pinyin: 'sūn xífù',       chain: '孫媳婦' },
+  'son.daughter.husband':      { zh: '孫女婿',  pinyin: 'sūnnǚxu',        chain: '孫女婿' },
+  'daughter.son.wife':         { zh: '外孫媳婦', pinyin: 'wàisūn xífù',   chain: '外孫媳婦' },
+  'daughter.daughter.husband': { zh: '外孫女婿', pinyin: 'wàisūnnǚxu',    chain: '外孫女婿' },
+
+  // ── 3 steps: great-grandchildren ────────────────────────
+  'son.son.son':               { zh: '曾孫',     pinyin: 'zēngsūn',            chain: '曾孫' },
+  'son.son.daughter':          { zh: '曾孫女',   pinyin: 'zēngsūnnǚ',          chain: '曾孫女' },
+  'son.daughter.son':          { zh: '曾外孫',   pinyin: 'zēng wàisūn',        chain: '曾外孫' },
+  'son.daughter.daughter':     { zh: '曾外孫女', pinyin: 'zēng wàisūnnǚ',      chain: '曾外孫女' },
+  'daughter.son.son':          { zh: '外曾孫',   pinyin: 'wài zēngsūn',        chain: '外曾孫' },
+  'daughter.son.daughter':     { zh: '外曾孫女', pinyin: 'wài zēngsūnnǚ',      chain: '外曾孫女' },
+  'daughter.daughter.son':     { zh: '外曾外孫', pinyin: 'wài zēng wàisūn',    chain: '外曾外孫' },
+  'daughter.daughter.daughter':{ zh: '外曾外孫女', pinyin: 'wài zēng wàisūnnǚ', chain: '外曾外孫女' },
 
   // ── 3 steps: paternal cousins (堂) — age-dependent ──────
   'father.elder_brother.son':        { ageDependent: true, older: { zh: '堂兄', pinyin: 'táng xiōng' }, younger: { zh: '堂弟', pinyin: 'táng dì' } },
@@ -171,22 +219,44 @@ export const chineseRelationships = {
   'younger_sister.son.wife':      { zh: '外甥媳', pinyin: 'wàishēngxí'  },
   'younger_sister.daughter.husband':{ zh: '外甥女婿', pinyin: 'wàishēngnǚxu' },
 
+  // ── 4 steps: grand-nieces & grand-nephews ───────────────
+  'elder_brother.son.son':              { zh: '姪孫',     pinyin: 'zhí sūn'              },
+  'elder_brother.son.daughter':         { zh: '姪孫女',   pinyin: 'zhí sūnnǚ'            },
+  'elder_brother.daughter.son':         { zh: '姪外孫',   pinyin: 'zhí wàisūn'           },
+  'elder_brother.daughter.daughter':    { zh: '姪外孫女', pinyin: 'zhí wàisūnnǚ'         },
+  'younger_brother.son.son':            { zh: '姪孫',     pinyin: 'zhí sūn'              },
+  'younger_brother.son.daughter':       { zh: '姪孫女',   pinyin: 'zhí sūnnǚ'            },
+  'younger_brother.daughter.son':       { zh: '姪外孫',   pinyin: 'zhí wàisūn'           },
+  'younger_brother.daughter.daughter':  { zh: '姪外孫女', pinyin: 'zhí wàisūnnǚ'         },
+  'elder_sister.son.son':               { zh: '外甥孫',   pinyin: 'wàishēng sūn'         },
+  'elder_sister.son.daughter':          { zh: '外甥孫女', pinyin: 'wàishēng sūnnǚ'       },
+  'elder_sister.daughter.son':          { zh: '外甥外孫', pinyin: 'wàishēng wàisūn'      },
+  'elder_sister.daughter.daughter':     { zh: '外甥外孫女', pinyin: 'wàishēng wàisūnnǚ'  },
+  'younger_sister.son.son':             { zh: '外甥孫',   pinyin: 'wàishēng sūn'         },
+  'younger_sister.son.daughter':        { zh: '外甥孫女', pinyin: 'wàishēng sūnnǚ'       },
+  'younger_sister.daughter.son':        { zh: '外甥外孫', pinyin: 'wàishēng wàisūn'      },
+  'younger_sister.daughter.daughter':   { zh: '外甥外孫女', pinyin: 'wàishēng wàisūnnǚ'  },
+
   // ── 3 steps: great-grandparents ─────────────────────────
   'father.father.father': { zh: '曾祖父', pinyin: 'zēngzǔfù', chain: '太爺爺' },
   'father.father.mother': { zh: '曾祖母', pinyin: 'zēngzǔmǔ', chain: '太奶奶' },
   'mother.mother.father': { zh: '外曾祖父', pinyin: 'wài zēngzǔfù', chain: '太外公' },
   'mother.mother.mother': { zh: '外曾祖母', pinyin: 'wài zēngzǔmǔ', chain: '太外婆' },
+  'father.mother.father': { zh: '外曾祖父', pinyin: 'wài zēngzǔfù', chain: '太公' },
+  'father.mother.mother': { zh: '外曾祖母', pinyin: 'wài zēngzǔmǔ', chain: '太婆' },
+  'mother.father.father': { zh: '外曾祖父', pinyin: 'wài zēngzǔfù', chain: '太外公' },
+  'mother.father.mother': { zh: '外曾祖母', pinyin: 'wài zēngzǔmǔ', chain: '太外婆' },
 };
 
 export const zhButtons = [
-  { key: 'father',          label: '父', chain: '爸爸' },
-  { key: 'mother',          label: '母', chain: '媽媽' },
-  { key: 'husband',         label: '夫', chain: '丈夫' },
-  { key: 'wife',            label: '妻', chain: '妻子' },
-  { key: 'elder_brother',   label: '兄', chain: '哥哥' },
-  { key: 'younger_brother', label: '弟', chain: '弟弟' },
-  { key: 'elder_sister',    label: '姐', chain: '姐姐' },
-  { key: 'younger_sister',  label: '妹', chain: '妹妹' },
-  { key: 'son',             label: '子', chain: '兒子' },
-  { key: 'daughter',        label: '女', chain: '女兒' },
+  { key: 'father',          label: '父', pinyin: 'fù',    chain: '爸爸' },
+  { key: 'mother',          label: '母', pinyin: 'mǔ',    chain: '媽媽' },
+  { key: 'husband',         label: '夫', pinyin: 'fū',    chain: '丈夫' },
+  { key: 'wife',            label: '妻', pinyin: 'qī',    chain: '妻子' },
+  { key: 'elder_brother',   label: '兄', pinyin: 'xiōng', chain: '哥哥' },
+  { key: 'younger_brother', label: '弟', pinyin: 'dì',    chain: '弟弟' },
+  { key: 'elder_sister',    label: '姐', pinyin: 'jiě',   chain: '姐姐' },
+  { key: 'younger_sister',  label: '妹', pinyin: 'mèi',   chain: '妹妹' },
+  { key: 'son',             label: '子', pinyin: 'zǐ',    chain: '兒子' },
+  { key: 'daughter',        label: '女', pinyin: 'nǚ',    chain: '女兒' },
 ];

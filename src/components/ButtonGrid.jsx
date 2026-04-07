@@ -32,38 +32,48 @@ export default function ButtonGrid({
     const lines = btn.label.split('\n');
     return (
       <button
-        className={`${BTN_BASE} ${enabled ? BTN_NORMAL : BTN_DISABLED} ${btnTextSize} aspect-square flex-col gap-0`}
+        className={`${BTN_BASE} ${enabled ? BTN_NORMAL : BTN_DISABLED} ${btnTextSize} h-full w-full flex-col gap-0`}
         onPointerDown={() => enabled && onRelation(btn)}
         disabled={!enabled}
       >
         {lines.map((line, i) => <span key={i}>{line}</span>)}
+        {isChinese && btn.pinyin && (
+          <span className="text-xs font-normal tracking-tight text-gray-400 leading-none mt-0.5" style={{fontFamily: 'sans-serif'}}>
+            {btn.pinyin}
+          </span>
+        )}
       </button>
     );
   }
 
   return (
-    <div className="flex flex-col gap-0.5 bg-gray-900 px-0.5 pb-0.5">
+    <div className="flex-1 flex flex-col gap-0.5 bg-gray-900 px-0.5 pb-0.5 min-h-0">
       {/* Row 1 */}
-      <div className="grid grid-cols-4 gap-0.5">
+      <div className="flex-1 grid grid-cols-4 gap-0.5">
         {row1.map(btn => <RelBtn key={btn.key} btn={btn} />)}
       </div>
 
       {/* Row 2 */}
-      <div className="grid grid-cols-4 gap-0.5">
+      <div className="flex-1 grid grid-cols-4 gap-0.5">
         {row2.map(btn => <RelBtn key={btn.key} btn={btn} />)}
       </div>
 
       {/* Row 3: Son, Daughter, Connector (spans 2) */}
-      <div className="grid grid-cols-4 gap-0.5">
+      <div className="flex-1 grid grid-cols-4 gap-0.5">
         {row3.map(btn => <RelBtn key={btn.key} btn={btn} />)}
 
         {/* Connector button — spans 2 columns */}
         <button
-          className={`${BTN_BASE} ${canConnector ? BTN_CONNECTOR : BTN_DISABLED} col-span-2 aspect-auto h-[23vw] max-h-24 text-3xl`}
+          className={`${BTN_BASE} ${canConnector ? BTN_CONNECTOR : BTN_DISABLED} col-span-2 h-full text-3xl flex-col gap-0`}
           onPointerDown={() => canConnector && onConnector()}
           disabled={!canConnector}
         >
           {connector}
+          {isChinese && (
+            <span className="text-xs font-normal tracking-tight text-orange-300 leading-none mt-0.5" style={{fontFamily: 'sans-serif'}}>
+              de
+            </span>
+          )}
         </button>
       </div>
     </div>

@@ -33,7 +33,9 @@ function primeSpeech() {
 
 export default function App() {
   const speechPrimed = useRef(false);
-  const [language, setLanguage]       = useState('zh');
+  const [language, setLanguage]       = useState(() =>
+    localStorage.getItem('language') ?? (navigator.language?.startsWith('zh') ? 'zh' : 'ta')
+  );
   const [gender, setGender]           = useState('male');
   const [tokens, setTokens]           = useState([]);
   const [result, setResult]           = useState(null);
@@ -99,6 +101,7 @@ export default function App() {
 
   function handleLanguageChange(lang) {
     setLanguage(lang);
+    localStorage.setItem('language', lang);
     if (result === null && pendingAge === null) return;
     const newData = lang === 'zh' ? chineseRelationships : tamilRelationships;
     const resolved = resolveResult(path, newData);
@@ -119,7 +122,7 @@ export default function App() {
     >
 
       {/* Display area: chain + result, with ← / AC sidebar */}
-      <div className="flex-1 flex bg-gray-800 overflow-hidden min-h-0">
+      <div className="flex-[2] flex bg-gray-800 overflow-hidden min-h-0">
         <div className="flex-1 flex flex-col p-4 overflow-hidden">
           <ChainDisplay
             tokens={tokens}
@@ -161,66 +164,71 @@ export default function App() {
         </div>
       </div>
 
-      {/* Options bar */}
-      <div className="flex items-center justify-between px-3 py-2 bg-gray-700 shrink-0">
-        {/* Language toggle */}
-        <div className="flex gap-0.5 bg-gray-600 rounded p-0.5">
-          <button
-            className={`${TOGGLE_BASE} ${language === 'zh' ? TOGGLE_ON : TOGGLE_OFF}`}
-            onPointerDown={() => handleLanguageChange('zh')}
-          >
-            中文
-          </button>
-          <button
-            className={`${TOGGLE_BASE} ${language === 'ta' ? TOGGLE_ON : TOGGLE_OFF}`}
-            onPointerDown={() => handleLanguageChange('ta')}
-          >
-            தமிழ்
-          </button>
+      {/* Keyboard section */}
+      <div className="flex-[3] flex flex-col min-h-0">
+
+        {/* Options bar */}
+        <div className="flex items-center justify-between px-3 py-2 bg-gray-700 shrink-0">
+          {/* Language toggle */}
+          <div className="flex gap-0.5 bg-gray-600 rounded p-0.5">
+            <button
+              className={`${TOGGLE_BASE} ${language === 'zh' ? TOGGLE_ON : TOGGLE_OFF}`}
+              onPointerDown={() => handleLanguageChange('zh')}
+            >
+              中文
+            </button>
+            <button
+              className={`${TOGGLE_BASE} ${language === 'ta' ? TOGGLE_ON : TOGGLE_OFF}`}
+              onPointerDown={() => handleLanguageChange('ta')}
+            >
+              தமிழ்
+            </button>
+          </div>
+
+          {/* Gender toggle */}
+          <div className="hidden flex gap-0.5 bg-gray-600 rounded p-0.5">
+            <button
+              className={`${TOGGLE_BASE} text-xl ${gender === 'male' ? TOGGLE_ON : TOGGLE_OFF}`}
+              onPointerDown={() => setGender('male')}
+              aria-label="Male"
+            >
+              👨
+            </button>
+            <button
+              className={`${TOGGLE_BASE} text-xl ${gender === 'female' ? TOGGLE_ON : TOGGLE_OFF}`}
+              onPointerDown={() => setGender('female')}
+              aria-label="Female"
+            >
+              👩
+            </button>
+          </div>
         </div>
 
-        {/* Gender toggle */}
-        <div className="flex gap-0.5 bg-gray-600 rounded p-0.5">
-          <button
-            className={`${TOGGLE_BASE} text-xl ${gender === 'male' ? TOGGLE_ON : TOGGLE_OFF}`}
-            onPointerDown={() => setGender('male')}
-            aria-label="Male"
-          >
-            👨
-          </button>
-          <button
-            className={`${TOGGLE_BASE} text-xl ${gender === 'female' ? TOGGLE_ON : TOGGLE_OFF}`}
-            onPointerDown={() => setGender('female')}
-            aria-label="Female"
-          >
-            👩
-          </button>
-        </div>
+        {/* Button grid */}
+        <ButtonGrid
+          buttons={buttons}
+          connector={connector}
+          onRelation={handleRelationPress}
+          onConnector={handleConnector}
+          canRelation={canRelation}
+          canConnector={canConnector}
+          language={language}
+        />
+
+        {/* Calculate button */}
+        <button
+          className={`w-full h-16 text-3xl font-bold tracking-widest shrink-0
+            ${canCalculate
+              ? 'bg-orange-500 text-white active:bg-orange-600'
+              : 'bg-orange-900 text-orange-700 cursor-default'}`}
+          onPointerDown={() => canCalculate && handleCalculate()}
+          disabled={!canCalculate}
+          aria-label="Calculate"
+        >
+          =
+        </button>
+
       </div>
-
-      {/* Button grid */}
-      <ButtonGrid
-        buttons={buttons}
-        connector={connector}
-        onRelation={handleRelationPress}
-        onConnector={handleConnector}
-        canRelation={canRelation}
-        canConnector={canConnector}
-        language={language}
-      />
-
-      {/* Calculate button */}
-      <button
-        className={`w-full h-16 text-3xl font-bold tracking-widest shrink-0
-          ${canCalculate
-            ? 'bg-orange-500 text-white active:bg-orange-600'
-            : 'bg-orange-900 text-orange-700 cursor-default'}`}
-        onPointerDown={() => canCalculate && handleCalculate()}
-        disabled={!canCalculate}
-        aria-label="Calculate"
-      >
-        =
-      </button>
 
     </div>
   );

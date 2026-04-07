@@ -69,10 +69,10 @@ export default function ResultDisplay({ result, language, hasTokens }) {
   if (language === 'zh') {
     const hasColloquial = result.chain && result.chain !== result.zh;
     return (
-      <div className="flex-1 flex flex-col items-start justify-center pl-2">
+      <div className="flex-1 flex flex-col items-start justify-center pl-2 min-h-0">
         <div className="flex items-center w-full">
-          <div className="flex-1">
-            <div className="font-kaiti text-white text-6xl font-light tracking-wide">{result.zh}</div>
+          <div className="flex-1 min-w-0">
+            <div className="font-kaiti text-white text-6xl font-light tracking-wide break-words">{result.zh}</div>
             {result.pinyin && (
               <div className="text-orange-400 text-xl mt-1 tracking-widest">{result.pinyin}</div>
             )}
@@ -84,8 +84,8 @@ export default function ResultDisplay({ result, language, hasTokens }) {
             <Divider />
             <ColloquialLabel language={language} />
             <div className="flex items-center w-full">
-              <div className="flex-1">
-                <div className="font-kaiti text-gray-200 text-5xl font-light tracking-wide">{result.chain}</div>
+              <div className="flex-1 min-w-0">
+                <div className="font-kaiti text-gray-200 text-5xl font-light tracking-wide break-words">{result.chain}</div>
                 {result.colloquialPinyin && (
                   <div className="text-orange-300 text-lg mt-1 tracking-widest">{result.colloquialPinyin}</div>
                 )}
@@ -101,10 +101,10 @@ export default function ResultDisplay({ result, language, hasTokens }) {
   // Tamil
   const hasColloquial = result.colloquial && result.colloquial !== result.ta;
   return (
-    <div className="flex-1 flex flex-col items-start justify-center pl-2">
+    <div className="flex-1 flex flex-col items-start justify-center pl-2 min-h-0">
       <div className="flex items-center w-full">
-        <div className="flex-1">
-          <div className="text-white text-5xl font-light">{result.ta}</div>
+        <div className="flex-1 min-w-0">
+          <div className="text-white text-5xl font-light break-words">{result.ta}</div>
           {result.roman && (
             <div className="text-orange-400 text-xl mt-1">{result.roman}</div>
           )}
@@ -116,8 +116,8 @@ export default function ResultDisplay({ result, language, hasTokens }) {
           <Divider />
           <ColloquialLabel language={language} />
           <div className="flex items-center w-full">
-            <div className="flex-1">
-              <div className="text-gray-200 text-4xl font-light">{result.colloquial}</div>
+            <div className="flex-1 min-w-0">
+              <div className="text-gray-200 text-4xl font-light break-words">{result.colloquial}</div>
               {result.colloquialRoman && (
                 <div className="text-orange-300 text-lg mt-1">{result.colloquialRoman}</div>
               )}
